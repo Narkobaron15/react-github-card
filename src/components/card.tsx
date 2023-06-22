@@ -1,14 +1,25 @@
 import React from "react";
 import axios from 'axios';
 import { useState, useEffect, useCallback } from 'react';
+import { toast } from 'react-toastify';
 
-import IGitHubUser, { emptyUser } from "../models/cardmodel";
+import { emptyUser } from "../models/cardmodel";
 
 type CardProps = {
     username: string
 };
 
 const apipath = 'https://api.github.com/users/';
+
+const emitWarn = (msg: string) => toast.error(msg, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+});
 const load = (parameter: string, setUser: Function) => {
     let isSubscribed = true;
 
@@ -18,7 +29,7 @@ const load = (parameter: string, setUser: Function) => {
             setUser(json);
         }
     }
-    fetchData().catch(err => console.warn(`Can't load data for '${parameter}'`));
+    fetchData().catch(err => emitWarn(`Can't load data for '${parameter}'!`));
 
     return () => { isSubscribed = false };
 }

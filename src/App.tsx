@@ -1,6 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Card from './components/card';
 
 const DEFAULT_USER = "Narkobaron15";
@@ -18,6 +21,7 @@ function App() {
           onChange={(e) => setUserName(e.target.value)} />
         <Card username={username.length === 0 ? DEFAULT_USER : username} />
       </main>
+      <ToastContainer/>
     </>
   );
 }

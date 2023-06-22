@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply px-10 py-8 text-gray-900 dark:text-gray-200;
+        @apply px-10 py-8 text-gray-900 dark:text-gray-200 dark:bg-gray-900;
     }
     
     header, main {
@@ -20,7 +20,7 @@
     }
 
     input {
-        @apply mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-96 rounded-md sm:text-sm focus:ring-1 mb-10;
+        @apply mt-1 px-3 py-2 text-black bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-96 rounded-md sm:text-sm focus:ring-1 mb-10;
     }
 }
 
