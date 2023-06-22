@@ -61,7 +61,7 @@ export default function Card({ username }: CardProps) {
                         {
                             user.name === null
                                 ? ''
-                                : <span>{user.login}<i className="ml-2 fa-solid fa-arrow-up-right-from-square"></i></span>
+                                : <span>@{user.login}<i className="ml-2 fa-solid fa-arrow-up-right-from-square"></i></span>
                         }
                     </a>
                 </h6>
