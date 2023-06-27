@@ -765,10 +765,19 @@ input:focus {
 
 .card .background-image {
   position: absolute;
-  top: 1.5rem;
+  top: 1rem;
   left: 50%;
   z-index: -10;
-  height: 18rem;
+}
+
+.card .background-image img {
+  position: relative;
+  left: -50%;
+  height: 9rem;
+  border-radius: 9999px;
+  --tw-blur: blur(24px);
+  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .card .stats {
@@ -866,14 +875,6 @@ input:focus {
   align-items: center;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-}
-
-.card .background-image img {
-  position: relative;
-  left: -50%;
-  --tw-blur: blur(24px);
-  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @media (min-width: 768px) {
